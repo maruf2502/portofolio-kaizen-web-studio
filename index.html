@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kaizen Web Studio - Kembangkan Digital Anda, Satu Perbaikan demi Satu">
+    <title>Kaizen Web Studio | Web Development & Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo_kaizen_web_studio.png" alt="Kaizen Web Studio Logo" class="logo-image">
+                <span class="brand-text">Kaizen Web Studio</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#philosophy">Filosofi</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#packages">Paket</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-wave-layer" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h2 class="hero-title">Kembangkan Digital Anda</h2>
+                <p class="hero-subtitle">Satu Perbaikan demi Satu</p>
+                <p class="hero-description">
+                    Kaizen Web Studio menghadirkan solusi web development yang berkelanjutan, menggabungkan
+                    filosofi Jepang dengan praktik terbaik modern
+                </p>
+                <button class="cta-button">Mulai Proyek Anda</button>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-element visual-1"><span class="visual-text">Kaizen</span></div>
+                <div class="visual-element visual-2"><span class="visual-text">Web</span></div>
+                <div class="visual-element visual-3"><span class="visual-text">Studio</span></div>
+                <!-- <div class="hero-emblem" aria-hidden="true">
+                    <div class="hero-emblem-badge">KZ</div>
+                    <div class="hero-emblem-caption">Kaizen Cycle</div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Tentang Kaizen Web Studio</h2>
+                <p class="about-text">
+                    Kaizen Web Studio lahir dari visi menjadi mitra pengembangan web yang menekankan 
+                    kualitas dari dalam. Kami melihat web development bukan hanya sekadar menulis kode, 
+                    tapi seni membangun fondasi digital yang kokoh.
+                </p>
+                <p class="about-text">
+                    Terinspirasi dari filosofi Jepang "Kaizen" (改善) yang berarti perbaikan berkelanjutan, 
+                    kami berkomitmen menciptakan web yang tidak hanya berfungsi sempurna hari ini, 
+                    tapi juga siap berkembang seiring waktu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="container">
+            <h2 class="section-title">Filosofi Kaizen Kami</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-card">
+                    <div class="card-number">1</div>
+                    <h3>Perbaikan Berkelanjutan</h3>
+                    <p>Setiap baris kode dievaluasi, diperbaiki, dan ditingkatkan sesuai standar tertinggi untuk hasil optimal.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-number">2</div>
+                    <h3>Arsitektur Bersih</h3>
+                    <p>Kode modular yang mudah dikembangkan, didokumentasikan, dan siap menghadapi perubahan masa depan.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-number">3</div>
+                    <h3>Pengujian & Otomasi</h3>
+                    <p>CI/CD pipeline yang memastikan peluncuran tanpa bug dengan kualitas yang konsisten dan terpercaya.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-number">4</div>
+                    <h3>Performa Optimal</h3>
+                    <p>Fokus pada kecepatan loading, SEO, dan user experience sejak awal pengembangan proyek.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-number">5</div>
+                    <h3>Kolaborasi Transparan</h3>
+                    <p>Komunikasi terbuka dengan klien menggunakan metodologi agile untuk hasil yang sesuai visi bisnis.</p>
+                </div>
+                <div class="philosophy-card">
+                    <div class="card-number">6</div>
+                    <h3>Dukungan Berkelanjutan</h3>
+                    <p>Perawatan pasca-peluncuran dengan prinsip Kaizen untuk web yang terus berkembang dan optimal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kaizen Web Studio</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Web Adaptif & Skalabel</h3>
+                    <p>Solusi yang siap untuk pertumbuhan tanpa biaya tambahan yang besar di masa depan.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Desain Modern & UX Terbaik</h3>
+                    <p>Interface yang menarik dengan praktik user experience dan design thinking terkini.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Proses Efisien</h3>
+                    <p>Metodologi agile yang hemat waktu dan biaya untuk delivery yang cepat dan berkualitas.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Dukungan Pasca-Layanan</h3>
+                    <p>Maintenance dan perawatan berkelanjutan dengan prinsip Kaizen yang terus ditingkatkan.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Tim Berpengalaman</h3>
+                    <p>Profesional web development dengan keahlian dalam React, Node.js, dan cloud services.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Hasil Terukur</h3>
+                    <p>Solusi yang selaras dengan tujuan bisnis Anda dengan metrik kesuksesan yang jelas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Aplikasi web modern dengan teknologi terkini seperti React, Node.js, dan cloud infrastructure.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Software Solutions</h3>
+                    <p>Solusi software custom yang dirancang khusus untuk kebutuhan bisnis spesifik Anda.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Konsultasi Digital</h3>
+                    <p>Strategi digital dan arsitektur sistem yang selaras dengan roadmap pertumbuhan bisnis Anda.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Maintenance & Support</h3>
+                    <p>Dukungan berkelanjutan dengan perawatan proaktif dan update reguler sesuai prinsip Kaizen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title">Level Paket</h2>
+            <p class="section-subtitle">Pilih paket sesuai kebutuhan dan tahap bisnis Anda.</p>
+            <div class="packages-grid">
+                <article class="package-card" data-package="Starter" data-price="Rp 1.500.000 – Rp 3.000.000">
+                    <div class="package-header">
+                        <h3 class="package-title">💼 <span class="package-name">Starter</span></h3>
+                        <p class="package-tagline">Website sederhana untuk personal &amp; UMKM</p>
+                        <p class="package-price">💰 Rp 1.500.000 – Rp 3.000.000</p>
+                    </div>
+
+                    <div class="package-section">
+                        <h4>Yang kami siapkan:</h4>
+                        <ul>
+                            <li>1–5 halaman</li>
+                            <li>Desain responsif</li>
+                            <li>Konten statis</li>
+                            <li>Integrasi WhatsApp</li>
+                            <li>SEO basic</li>
+                        </ul>
+                    </div>
+
+                    <div class="package-section">
+                        <h4>Paling pas untuk:</h4>
+                        <ul>
+                            <li>Personal brand</li>
+                            <li>Portfolio</li>
+                            <li>Company profile kecil</li>
+                        </ul>
+                    </div>
+
+                    <p class="package-note">🔹 Harga bisa lebih rendah/tinggi tergantung desain &amp; jumlah halaman</p>
+                    <div class="package-actions">
+                        <button type="button" class="cta-button package-cta" data-package-select="Starter">Pilih Paket</button>
+                    </div>
+                </article>
+
+                <article class="package-card" data-package="Business" data-price="Rp 4.000.000 – Rp 8.000.000">
+                    <div class="package-header">
+                        <!-- <span class="package-badge" aria-label="Paling populer">Paling populer</span> -->
+                        <h3 class="package-title">🏢 <span class="package-name">Business</span></h3>
+                        <p class="package-tagline">Website dinamis dengan admin &amp; pengelolaan data</p>
+                        <p class="package-price">💰 Rp 4.000.000 – Rp 8.000.000</p>
+                    </div>
+
+                    <div class="package-section">
+                        <h4>Yang kami siapkan:</h4>
+                        <ul>
+                            <li>Admin panel</li>
+                            <li>Login</li>
+                            <li>CRUD (artikel / produk / data)</li>
+                            <li>Database</li>
+                            <li>Upload gambar/file</li>
+                        </ul>
+                    </div>
+
+                    <div class="package-section">
+                        <h4>Paling pas untuk:</h4>
+                        <ul>
+                            <li>UMKM aktif</li>
+                            <li>Website bisnis</li>
+                            <li>Sistem data sederhana</li>
+                        </ul>
+                    </div>
+
+                    <p class="package-note">🔹 Harga naik jika jumlah modul CRUD banyak atau desain kompleks</p>
+                    <div class="package-actions">
+                        <button type="button" class="cta-button package-cta" data-package-select="Business">Pilih Paket</button>
+                    </div>
+                </article>
+
+                <article class="package-card" data-package="Custom Solution" data-price="Mulai dari Rp 10.000.000+">
+                    <div class="package-header">
+                        <h3 class="package-title">🚀 <span class="package-name">Custom</span> Solution</h3>
+                        <p class="package-tagline">Sistem khusus sesuai kebutuhan bisnis Anda</p>
+                        <p class="package-price">💰 Mulai dari Rp 10.000.000+ <span class="package-price-sub">(harga final via diskusi)</span></p>
+                    </div>
+
+                    <div class="package-section">
+                        <h4>Yang kami siapkan:</h4>
+                        <ul>
+                            <li>Sistem custom</li>
+                            <li>Logic bisnis khusus</li>
+                            <li>Integrasi API / payment / dashboard</li>
+                            <li>Role &amp; permission kompleks</li>
+                            <li>Dokumentasi &amp; maintenance opsional</li>
+                        </ul>
+                    </div>
+
+                    <p class="package-note">🔹 Harga ditentukan setelah diskusi kebutuhan &amp; scope proyek</p>
+                    <div class="package-actions">
+                        <button type="button" class="cta-button package-cta" data-package-select="Custom Solution">Diskusi Kebutuhan</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Cara Kerja Kami</h2>
+            <div class="process-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">01</div>
+                    <h3>Perencanaan Berulang</h3>
+                    <p>Siklus Kaizen untuk memahami dan menyempurnakan kebutuhan secara bertahap dan terstruktur.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">02</div>
+                    <h3>Desain Modular</h3>
+                    <p>Arsitektur bersih dengan komponen yang terstruktur untuk fleksibilitas dan kemudahan maintenance.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">03</div>
+                    <h3>Development & Testing</h3>
+                    <p>Pengembangan dengan pengujian otomatis dan CI/CD untuk memastikan kualitas setiap deployment.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">04</div>
+                    <h3>Peluncuran & Monitor</h3>
+                    <p>Launching yang smooth dengan monitoring berkelanjutan dan optimasi performa real-time.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">05</div>
+                    <h3>Perbaikan Berkelanjutan</h3>
+                    <p>Iterasi improvement berdasarkan feedback pengguna dan metrik performa untuk hasil maksimal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Mengevolusi Digital Anda?</h2>
+            <p>Hubungi kami hari ini untuk mendiskusikan visi dan kebutuhan proyek Anda dengan tim expert kami.</p>
+            <button class="cta-button cta-button-dark">Mulai Konsultasi Gratis</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Kami Menunggu Anda</h3>
+                    <p>Apakah Anda memiliki proyek yang ingin kami wujudkan? Mari kita berbicara tentang ide Anda.</p>
+                    <div class="contact-details">
+                        <div class="contact-card-head">
+                            <img
+                                src="images/logo_kaizen_web_studio.png"
+                                alt="Kaizen Web Studio"
+                                class="contact-card-logo"
+                                loading="lazy"
+                            >
+                            <div class="contact-card-head-text">
+                                <p class="contact-card-title">Kontak Resmi</p>
+                                <p class="contact-card-subtitle">Respon cepat via email / WhatsApp</p>
+                            </div>
+                        </div>
+
+                        <ul class="contact-list" aria-label="Detail kontak">
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11Z" fill="none" stroke="currentColor" stroke-width="2" />
+                                        <path d="M6 7l6 5 6-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a
+                                        class="contact-value email-link"
+                                        href="mailto:kaizen.webstudio11@gmail.com?subject=Pemesanan%20%2F%20Konsultasi%20-%20Kaizen%20Web%20Studio&body=Halo%20Kaizen%20Web%20Studio%2C%0D%0A%0D%0ASaya%20ingin%20konsultasi%20%2F%20pemesanan%20dengan%20detail%20berikut%3A%0D%0A%0D%0A-%20Nama%3A%0D%0A-%20Email%3A%0D%0A-%20Perusahaan%20(opsional)%3A%0D%0A-%20Paket%20yang%20diminati%20(Starter%20%2F%20Business%20%2F%20Custom)%3A%0D%0A-%20Ringkasan%20kebutuhan%3A%0D%0A-%20Target%2Ftujuan%3A%0D%0A-%20Deadline%3A%0D%0A-%20Budget%20(opsional)%3A%0D%0A-%20Referensi%20(desain%2Fwebsite)%20(opsional)%3A%0D%0A%0D%0ATerima%20kasih."
+                                    >
+                                        kaizen.webstudio11@gmail.com
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M6.6 10.8c1.6 3 3.6 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                <div class="contact-text">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a
+                                        class="contact-value"
+                                        href="https://wa.me/6289697607595"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        +62 896 9760 7595
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" focusable="false">
+                                        <path d="M12 22s7-4.6 7-11a7 7 0 1 0-14 0c0 6.4 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                        <path d="M12 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" fill="none" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </span>
+                                <div class="contact-text">
+                                    <span class="contact-label">Lokasi</span>
+                                    <span class="contact-value">Bandung, Jawa Barat, Indonesia</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Kaizen Web Studio</h4>
+                    <p>Kembangkan Digital Anda – Satu Perbaikan demi Satu.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#philosophy">Filosofi</a></li>
+                        <li><a href="#packages">Paket</a></li>
+                        <li><a href="#services">Layanan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 1 1-7-7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <rect x="5" y="5" width="14" height="14" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="2" />
+                                <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2" />
+                                <circle cx="16.5" cy="7.5" r="1" fill="currentColor" />
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kaizen Web Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Package Order Modal -->
+    <div class="modal-overlay" id="packageModal" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="packageModalTitle">
+            <button type="button" class="modal-close" id="packageModalClose" aria-label="Tutup">×</button>
+            <h3 class="modal-title" id="packageModalTitle">Pesan Paket</h3>
+            <p class="modal-subtitle" id="packageModalSubtitle">Lengkapi data singkat untuk memulai chat WhatsApp.</p>
+
+            <div class="order-summary" aria-label="Ringkasan paket">
+                <span class="order-summary-label">Paket dipilih</span>
+                <strong class="order-summary-value" id="orderPackageValue">-</strong>
+            </div>
+
+            <form class="package-order-form" id="packageOrderForm" novalidate>
+                <input type="hidden" id="orderPackageName" name="packageName">
+                <input type="hidden" id="orderPackagePrice" name="packagePrice">
+
+                <div class="form-group">
+                    <label class="form-label" for="orderName">Nama</label>
+                    <input class="form-input" type="text" id="orderName" name="name" placeholder="Nama Anda" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="orderEmail">Email</label>
+                    <input class="form-input" type="email" id="orderEmail" name="email" placeholder="nama@email.com" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="orderCompany">Nama Perusahaan <span class="form-hint">(opsional)</span></label>
+                    <input class="form-input" type="text" id="orderCompany" name="company" placeholder="Contoh: PT Kaizen" autocomplete="organization">
+                </div>
+
+                <button type="submit" class="cta-button cta-button-dark" id="orderSubmitBtn">Pesan via WhatsApp</button>
+                <p class="form-footnote">Dengan menekan tombol di atas, Anda akan diarahkan ke WhatsApp.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=20260121"></script>
+</body>
+</html>
