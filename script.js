@@ -5,28 +5,105 @@ const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    // Animate menu toggle
-    const spans = menuToggle.querySelectorAll("span");
-    spans[0].style.transform = navLinks.classList.contains("active")
-      ? "rotate(45deg) translate(10px, 10px)"
-      : "none";
-    spans[1].style.opacity = navLinks.classList.contains("active") ? "0" : "1";
-    spans[2].style.transform = navLinks.classList.contains("active")
-      ? "rotate(-45deg) translate(7px, -7px)"
-      : "none";
+  // Mobile menu drag functionality
+  let isDragging = false;
+  let startX, startY;
+  let startTop, startLeft;
+
+  const onDragStart = (e) => {
+    isDragging = true;
+    const clientX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === "touchstart" ? e.touches[0].clientY : e.clientY;
+
+    startX = clientX;
+    startY = clientY;
+
+    const rect = menuToggle.getBoundingClientRect();
+    startTop = rect.top;
+    startLeft = rect.left;
+
+    menuToggle.style.transition = "none";
+    menuToggle.style.right = "auto"; // Switch to left-based positioning for dragging
+    menuToggle.style.left = `${startLeft}px`;
+  };
+
+  const onDragMove = (e) => {
+    if (!isDragging) return;
+    const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+    const clientY = e.type === "touchmove" ? e.touches[0].clientY : e.clientY;
+
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+
+    let newTop = startTop + deltaY;
+    let newLeft = startLeft + deltaX;
+
+    // Constrain within screen bounds
+    const threshold = 10;
+    const maxTop = window.innerHeight - menuToggle.offsetHeight - threshold;
+    const maxLeft = window.innerWidth - menuToggle.offsetWidth;
+
+    newTop = Math.max(threshold, Math.min(newTop, maxTop));
+    newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+
+    menuToggle.style.top = `${newTop}px`;
+    menuToggle.style.left = `${newLeft}px`;
+  };
+
+  const onDragEnd = () => {
+    if (!isDragging) return;
+    isDragging = false;
+
+    // Snap to closest side
+    const halfway = window.innerWidth / 2;
+    const currentLeft = menuToggle.offsetLeft;
+
+    menuToggle.style.transition =
+      "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+
+    if (currentLeft + menuToggle.offsetWidth / 2 < halfway) {
+      // Snap to left
+      menuToggle.style.left = "0";
+      menuToggle.style.borderRadius = "0 12px 12px 0";
+      menuToggle.style.boxShadow = "4px 0 20px rgba(15, 44, 31, 0.3)";
+    } else {
+      // Snap to right
+      menuToggle.style.left = `${window.innerWidth - menuToggle.offsetWidth}px`;
+      menuToggle.style.borderRadius = "12px 0 0 12px";
+      menuToggle.style.boxShadow = "-4px 0 20px rgba(15, 44, 31, 0.3)";
+    }
+  };
+
+  menuToggle.addEventListener("mousedown", onDragStart);
+  window.addEventListener("mousemove", onDragMove);
+  window.addEventListener("mouseup", onDragEnd);
+
+  menuToggle.addEventListener("touchstart", onDragStart, { passive: true });
+  window.addEventListener("touchmove", onDragMove, { passive: false });
+  window.addEventListener("touchend", onDragEnd);
+
+  menuToggle.addEventListener("click", (e) => {
+    // Prevent menu opening if button was dragged significantly
+    if (
+      Math.sqrt(
+        Math.pow(menuToggle.offsetTop - startTop, 2) +
+          Math.pow(menuToggle.offsetLeft - startLeft, 2),
+      ) > 10
+    ) {
+      return;
+    }
+
+    const isActive = navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+    document.body.style.overflow = isActive ? "hidden" : "auto";
   });
 
   // Close menu when link is clicked
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
-      // Reset menu toggle
-      const spans = menuToggle.querySelectorAll("span");
-      spans[0].style.transform = "none";
-      spans[1].style.opacity = "1";
-      spans[2].style.transform = "none";
+      menuToggle.classList.remove("active");
+      document.body.style.overflow = "auto";
     });
   });
 }
