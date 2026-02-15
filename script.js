@@ -183,7 +183,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe cards and elements
 document
   .querySelectorAll(
-    ".philosophy-card, .service-card, .package-card, .benefit-item, .timeline-item",
+    ".philosophy-card, .service-card, .package-card, .benefit-item, .timeline-item, .case-study-card",
   )
   .forEach((el) => {
     el.style.opacity = "0";
@@ -341,21 +341,33 @@ function attachScrambleText(el, { duration = 520 } = {}) {
   const title = hero?.querySelector(".hero-title");
   if (!hero || !waveLayer || !title) return;
 
-  // Split title into letter spans for wobble effect
-  // Preserve regular space characters as text nodes so spacing remains correct
+  // Split title into word & letter spans to prevent mid-word wrapping
+  // while still allowing the wobble effect on individual characters.
   const wrapLetters = (el) => {
     const text = (el.textContent || "").trim();
+    const words = text.split(" ");
     const frag = document.createDocumentFragment();
-    for (const ch of text) {
-      if (ch === " ") {
-        frag.appendChild(document.createTextNode(" "));
-        continue;
+
+    words.forEach((word, wordIdx) => {
+      const wordWrapper = document.createElement("span");
+      wordWrapper.style.display = "inline-block";
+      wordWrapper.style.whiteSpace = "nowrap";
+
+      for (const ch of word) {
+        const span = document.createElement("span");
+        span.textContent = ch;
+        span.className = "hero-letter";
+        wordWrapper.appendChild(span);
       }
-      const span = document.createElement("span");
-      span.textContent = ch;
-      span.className = "hero-letter";
-      frag.appendChild(span);
-    }
+
+      frag.appendChild(wordWrapper);
+
+      // Add space between words
+      if (wordIdx < words.length - 1) {
+        frag.appendChild(document.createTextNode(" "));
+      }
+    });
+
     el.textContent = "";
     el.appendChild(frag);
   };
@@ -656,7 +668,7 @@ function enableSpotlightTilt(card, { maxTilt = 8 } = {}) {
 
 document
   .querySelectorAll(
-    ".philosophy-card, .service-card, .package-card, .benefit-item, .timeline-item",
+    ".philosophy-card, .service-card, .package-card, .benefit-item, .timeline-item, .case-study-card",
   )
   .forEach((card) => {
     enableSpotlightTilt(card, {
