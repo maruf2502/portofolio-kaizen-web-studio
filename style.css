@@ -1625,6 +1625,30 @@ body.loader-active {
   margin-bottom: var(--spacing-2xl);
   border-bottom: 2px solid var(--neutral-100);
   padding-bottom: var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+}
+
+.case-study-header-main {
+  flex: 1;
+}
+
+.client-logo-wrapper {
+  flex-shrink: 0;
+}
+
+.client-logo {
+  height: 80px;
+  width: auto;
+  opacity: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale(1.05);
 }
 
 .case-study-tag {
@@ -2635,6 +2659,16 @@ body.loader-active {
 
 /* Responsive adjustments (mobile-first tweaks) */
 @media (max-width: 900px) {
+  .case-study-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .client-logo {
+    height: 60px;
+  }
+
   .navbar .container {
     justify-content: center;
   }
